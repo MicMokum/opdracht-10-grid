@@ -1,0 +1,83 @@
+body{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 10fr 5fr 1fr;
+}
+
+header{
+    background-color: cornflowerblue;
+    grid-row: 1;
+}
+
+main{
+    background-color: yellow;
+    grid-row: 2;
+}
+
+aside{
+    background-color: lawngreen;
+    grid-row: 3;
+}
+
+footer{
+    background-color: pink;
+    grid-row: 4;
+}
+
+
+@media (min-width: 800px){
+
+    body{
+        grid-template-columns: 150px auto;
+        grid-template-areas:
+            "h m"
+            "h m"
+            "h a"
+            ". f";
+    }
+
+    header{
+        grid-area: h;
+    }
+
+    main{
+        grid-area: m;
+    }
+
+    aside{
+        grid-area: a;
+    }
+
+    footer{
+        grid-area: f;
+    }
+}
+
+
+@media (min-width: 1024px){
+
+    body{
+        grid-template-columns: 150px auto 150px;
+        grid-template-areas:
+            "h m a"
+            "h m a"
+            "h m a"
+            ". f .";
+    }
+
+    header{
+        grid-area: h;
+    }
+
+    main{
+        grid-area: m;
+    }
+
+    aside{
+        grid-area: a;
+    }
+
+    footer{
+        grid-area: f;
+    }
+}
